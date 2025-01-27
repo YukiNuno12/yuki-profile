@@ -13,11 +13,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      # Node.js のセットアップ (推奨バージョンに変更)
+      # Node.js のセットアップ
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18.18.0 # 必要なバージョンを指定
+          node-version: 18
 
       # 依存関係をインストール
       - name: Install dependencies
