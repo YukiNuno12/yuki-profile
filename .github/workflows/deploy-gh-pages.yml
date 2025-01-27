@@ -13,11 +13,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      # Node.js のセットアップ
+      # Node.js のセットアップ (推奨バージョンに変更)
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18.18.0 # 必要なバージョンを指定
 
       # 依存関係をインストール
       - name: Install dependencies
@@ -32,4 +32,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out # ビルドされた出力ディレクトリ (プロジェクトに応じて変更)
+          publish_dir: ./out # ビルドされた出力ディレクトリ
